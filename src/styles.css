@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+body{
+    min-height:100vh;
+    background-color:bisque
+}
+h1{
+    text-align:center;
+    padding:10px;
+}
+#main{
+    display:grid;
+    width:85%;
+    grid-template-columns:200px 1fr;
+    margin:50px auto;
+    gap:20px;
+    border:1px solid black;
+    border-radius:5px;
+    padding:10px;
+}
+    
+#main #add-projects-btn{
+    display:block;
+    width:70%;
+    margin:10px auto;
+    height:30px;
+    font-size:1.1rem;
+    background-color:#737373;
+    color:white;
+    border-radius:7px;
+}
+#main #project-name-section{
+    height: 645px;;
+    overflow:scroll;
+    padding-top:20px;
+}
+#main #project-name-section button{
+    height:30px;
+    width:100%;
+    display:block;
+    background-color:antiquewhite;
+}
+#main #display{
+    overflow:scroll;
+    height:700px;
+    border-left:2px solid grey;
+}
+#display h2{
+    text-align:center;
+    padding:20px;
+}
+.task-add-btn{
+    display:block;
+    width:150px;
+    height:30px;
+    font-size:1.1rem;
+    border-radius:10px;
+    margin:5px auto;
+    background-color:black;
+    color:white;
+}
+.task{
+    border:1px solid black;
+    width:min(500px,90%);
+    margin:10px auto;
+    height:100px;
+    display:grid;
+    grid-template-columns:20px 1fr 1fr;
+    grid-template-rows:40px 1fr 1fr;
+    grid-template-areas:'heading heading date'
+                        'description description description'
+                        'checkbox edit delete';
+    place-items:center;
+    border-radius:10px;
+    background-color:whitesmoke;
+}
+.task h3{
+    grid-area:heading;
+    overflow:hidden;
+}
+.check-box{
+    grid-area:checkbox;
+    width:15px;
+    height:15px;
+}
+.check-box.completed{
+    background-color:green;
+}
+.edit{
+    grid-area:edit;
+    width:min(80%,150px);
+    height:25px;
+    background-color:black;
+    color:white;
+    border-radius:10px;
+}
+.delete{
+    grid-area:delete;
+    width:min(80%,150px);
+    height:25px;
+    background-color:red;
+    color:white;
+    border:0;
+}
+.description{
+    grid-area:description;
+    font-size:0.6rem;
+    overflow:hidden;
+    text-align:center;
+}
+.date{
+    grid-area:date;
+    font-size:0.8rem;
+}
+button span{
+    color:red;
+    float:right;
+    margin-right:4px;
+    font-size:1.1rem;
+}
+#task-form{
+    width:80%;
+    margin:20px auto;
+    background-color:aliceblue;
+    padding:10px;
+    border-radius:10px;
+}
+#task-form > *{
+    display:block;
+    margin:0 auto;
+    text-align:center;
+}
+
+#task-form > input{
+    margin: 5px auto 15px auto;
+}
+#task-form > textarea{
+    margin:5px auto 15px auto;
+}
+#task-form select{
+    width:100px;
+    height:30px;
+    border-radius:3px;
+    margin:5px auto 15px auto;
+}
+#task-form button{
+    margin:10px auto;
+    width:100px;
+    height:30px;
+    border-radius:5px;
+}
+#task-form button:nth-of-type(1){
+    background-color:blue;
+    color:white;
+}
+#task-form button:nth-of-type(2){
+    background-color:red;
+    color:white;
+}
+#project-form {
+    background-color:black;
+    width:250px;
+    margin:50px auto 0 auto;
+    border-radius:10px;
+    color:white;
+    height:100px;
+    padding:5px;
+}
+#project-form > *{
+    display:block;
+    margin:5px auto;
+    text-align:center;
+}
+#project-form button{
+    margin-top:20px;
+    width:70px;
+    height:25px;
+    background-color:blue;
+    color:white;
+    border-radius:5px;
+}
